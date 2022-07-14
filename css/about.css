@@ -1,0 +1,510 @@
+@charset "utf-8";
+/* font-family: 'Oswald', sans-serif; -영어*/
+/* font-family: 'Gowun Batang', serif; -명조*/
+/* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;    
+    color: inherit;
+
+}
+ul, ol{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size:14px;
+    line-height: 24px;
+    color:#333;
+    min-width:1500px;
+}
+/* .Oswald{
+  font-family: 'Oswald', sans-serif;
+} 폰트를 연결하는 다른방법, 
+클래스 설정 후, html파일에 클래스명을 넣어서 씁니다. */
+
+/* 글자 타이핑 스타일 효과주기 */
+.typing-txt{display: none;}
+		ul{list-style:none;}
+		.typing ul li.on {  
+		  display: inline-block; 
+		  animation-name: cursor; 
+		  animation-duration: 0.3s; 
+		  animation-iteration-count: infinite; 
+		} 
+		@keyframes cursor{ 
+		  0%{border-right: 1px solid #fff} 
+		  50%{border-right: 1px solid #000} 
+		  100%{border-right: 1px solid #fff} 
+		}
+
+
+    img, video{
+      vertical-align: middle;
+    /* 이미지 하단 빈틈을 없게 하기, 이미지를 블락시키면, 
+    텍스트 얼라인이 안먹힘, 그래서 대신 사용한 방법 */
+    }
+    
+    
+    /* head */
+    #head{
+      background-color: #fff;   
+      position: fixed;
+      top: 0;    
+      left: 0;
+      z-index: 10;
+      width: 100%;
+    }
+    #head_inner{
+      width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    #head_inner .logo{
+      float: left;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-right: 390px;
+    }
+    .gnb{
+      display: flex; 
+    }/* 기준 */
+    .gnb>li{
+      font-family: 'Oswald', sans-serif;
+      color: #1e4a43;
+      font-size: 24px;
+      font-weight: 400;
+      padding-top: 45px;
+      padding-bottom: 30px;
+      width: 25%;
+      /*기준이 되는 li아래에 공간을 만들어 줍니다. */
+    }
+    /*  하이퍼링크 설정  */
+    .gnb{
+      text-transform:uppercase;
+    }	
+    .gnb>li>a{display:block;
+        font-size:25px;}
+    .gnb>li>a:hover{color:#439386;}
+    .solid{
+       width:100px;
+        margin:auto;
+        margin-top:10px;
+        height:5px;
+        background:#439386;
+        visibility:hidden;
+        opacity:0;
+        transform:scaleX(0);
+        transition-property: opacity, transform;
+        transition-duration:0.5s;}
+    .gnb>li>a:hover .solid{transform:scaleX(1);
+                opacity:1;
+                visibility:visible;}	
+    
+    /* sub, 서브메뉴 만들기 */
+    .sub{
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%) scaleY(0);
+    top:100%;
+    width:100%;
+    z-index: 10;
+    }
+    .sub li a{
+    display: block;
+    background-color:rgba(0, 0, 0, 0.5);
+    font-size:14px;
+    font-weight: 400;
+    padding: 5px 0;
+    color:#fff;
+    transform: scaleX(0.95);/* 글자 가로로 축고 */
+    }
+    .sub li a:hover{
+    transition: color, background 0.5s;
+    }
+    .gnb>li{
+    position:relative;
+    }
+    
+    /*css로 서브메뉴 움직이면서 나타나게 만들기*/
+    .sub{
+    opacity:0;/*완전투명상태*/
+    transform: translateX(-50%) scaleY(0);
+    /*높이를 0으로 만듦*/
+    transform-origin: top;
+    /*변형기준점을 top으로 변경해줌,
+    hover가 있는 선택자에 사용하지 않습니다.*/
+    }
+    .gnb>li:hover>.sub{
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1);
+    }
+    .gnb>li>.sub{
+    transition:all 0.5s;
+    /* 사라질때도 부드럽게~ */
+    }
+    
+  /* mb */
+  #mb{
+    background-image: url(../images_a/about_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 540px;
+    width: 100%;
+    margin-top: 110px;
+    margin-bottom: 200px;
+  }
+  #mb_inner{
+    margin: 0 auto;
+    width: 1320px;
+    margin-bottom: 200px;
+    position: relative;
+  }
+  #mb_inner h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 104px;
+    padding-top: 150px;
+    padding-left: 580px;
+    color: #fff;
+    text-align: center;
+   }
+  .apple{
+    position: absolute;
+    left: 60px;
+    top: 383px;
+  }
+  .onion{
+    position: absolute;
+    right: -81px;
+    top: 358px;
+  }
+  .btn{
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight:400;
+  }    
+  .story{
+    background-color: #7aa541;
+    position: absolute;
+    top: 500px;
+    left: 380px;
+    width: 280px;
+    padding: 13px 0;
+    border-radius: 15px 0 0 0;
+  }
+  .story:hover{
+    background-color: #eff3ab;
+    color: #448338;
+    transform: translateY(-10px);
+  }
+  .story{
+    transition: all 0.6S;
+  }
+  .concept{
+    background-color: #448338;
+    position: absolute;
+    top: 500px;
+    right: 381px;
+    width: 280px;
+    padding: 13px 0;
+    border-radius: 0 0 15px 0;
+  }
+  .concept:hover{
+    background-color: #b0dfa2;
+    color: #305b28;
+    transform: translateY(-10px);
+  }
+  .concept{
+    transition: all 0.6S;
+  }
+
+  /* b_story */
+  #b_story{
+    width: 1320px;
+    margin: 0 auto;
+  }
+  .text{
+    float: left;
+  }
+  .img{
+    float: right;
+  }
+  .number{
+    font-size: 55px;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 9px;
+  }
+  #story1 .text .number{
+    color: #2d5925;
+  }
+  #story1 .text .title{
+    color: #448338;
+  }
+  .sub_title{
+    font-size: 25px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: 600;
+  }
+  .title{
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  #b_story p{
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 300;
+  }
+  .padding2{
+    padding-top: 40px;
+  }
+  #story1{
+    padding-bottom: 70px;
+  }
+  .padding1, .padding2{
+    color:#333;
+  }
+
+  #story2 .text .number{
+    color: #be4a21;
+  }
+  #story2 .text .title{
+    color: #e0673d;
+  }
+  .right{
+    float: right;
+  }
+  .left{
+    float: left;
+  }
+  #story2{
+    padding-bottom: 70px;
+  }
+  #story3 .text .number{
+    color: #da821d;
+  }
+  #story3 .text .title{
+    color: #f39b36;
+  }
+  #story3{
+    padding-bottom: 70px;
+  }
+  #story4{
+    padding-bottom: 200px;    
+    text-align: center;
+  }
+  /* story4는 글자가 옆에서 날라오는 애니메이션해주기 */
+  /* #story4 .sherif{
+    font-family: 'Gowun Batang', serif; 
+    font-size: 40px;
+    line-height: 60px;
+    color: #7aa541;
+    font-weight: 500;
+    padding: 15px 0;
+  } */
+  .typing{
+    font-family: 'Gowun Batang', serif; 
+    font-size: 40px;
+    line-height: 60px;
+    color: #7aa541;
+    font-weight: 500;
+    padding: 15px 0;
+  }
+  .sherif> b{
+    font-size: 50px;
+  }
+  .margin{
+    margin-top: 130px;
+  }
+   /* concept, 컨셉아이콘 */
+   #concept{
+    background-image: url(../images_a/concept_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1022px;
+    overflow: hidden;
+  }
+  #concept_inner{
+    width: 955px;
+    position: relative;
+    margin: 0 auto;
+   }
+#concept h2{
+  padding-top: 100px;
+  padding-bottom: 70px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+.b_icon{
+  position: absolute;
+  left: 475px;
+  transform: translateX(-50%);
+  top: 260px;
+}
+   .icon1{
+    background-image: url(../images_a/story_icon1.png);
+    background-repeat: no-repeat;
+    width: 466px;
+    height: 340px;
+    float: left;
+   }
+   .icon1:hover{
+    background-image: url(../images_a/story_icon1_1.png);
+    background-repeat: no-repeat;
+   }
+   .icon1{
+    transition: all 0.8s;
+   }
+   .icon2{
+    background-image: url(../images_a/story_icon2.png);
+    background-repeat: no-repeat;
+    width: 466px;
+    height: 340px;
+    float: right;
+   }
+   .icon2:hover{
+    background-image: url(../images_a/story_icon2_2.png);
+    background-repeat: no-repeat;
+   }
+   .icon2{
+    transition: all 0.8s;
+   }
+   .icon3{
+    background-image: url(../images_a/story_icon3.png);
+    background-repeat: no-repeat;
+    width: 466px;
+    height: 340px;
+    float: left;
+    margin-top: 25px;
+   }
+   .icon3:hover{
+    background-image: url(../images_a/story_icon3_3.png);
+    background-repeat: no-repeat;
+   }
+   .icon3{
+    transition: all 0.8s;
+   }
+   .icon4{
+    background-image: url(../images_a/story_icon4.png);
+    background-repeat: no-repeat;
+    width: 466px;
+    height: 340px;
+    float: right;
+    margin-top: 25px;
+   }
+   .icon4:hover{
+    background-image: url(../images_a/story_icon4_4.png);
+    background-repeat: no-repeat;
+   }
+   .icon4{
+    transition: all 0.8s;
+   }
+
+   /* 하단 이미지 움직임 주기 */
+   .green{
+    position: absolute;
+    left: -600px;
+    top: -100px;
+   }
+   .purple{
+    position: absolute;
+    right: -500px;
+    top: 400px;
+   }
+.aspa{
+  position: absolute;
+  right: -150px;
+  top: -100px;
+}
+  /* footer */
+  #footer{
+    background-color: #3c3734;
+  }
+  #footer_inner{
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .logo li{
+    float: left;
+    color: #ccc;
+    padding-top: 50px;
+    padding-right: 30px;
+  }
+  .footer_icon li{
+    float: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .footer_icon{
+    float: right;
+  }
+  .footer_icon a{
+    display: block;
+    padding-top: 50px;
+    border-radius: 20%;
+  }
+  .footer_icon li:nth-child(4){
+    padding-right: 0;
+  }
+  .footer_icon li img{
+    opacity: 50%;
+  }
+  .footer_icon li a:hover img{
+    opacity: 100%;
+    transform: translateY(-10px);
+    /* box-shadow: 0 5px 5px rgb(255, 255, 255, 15%); */
+    /* 그림자를 따로 만들어야 되려나? */
+  }
+  .footer_icon li:hover{
+    background-image: url(../images/sahdow.png);
+    background-repeat: no-repeat;
+    background-position:10px bottom;
+  }
+  .footer_icon li a img{
+    transition: all 0.5s;
+  }
+  .top{
+    position: fixed;  
+    bottom: 110px;
+    right: 100px;
+    /* 포지션+보텀+레프트 수치는 세트로~ */
+  }
+  .top a{
+    background-color: #1e4a43;
+    color: #fff;
+    border-radius: 50%;
+    width: 83px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;    
+    text-align: center;
+    line-height: 83px;
+    display: inline-block;
+  }
+  
+  .top a:hover{
+    background-color: #238173;
+    color: #fff;
+  }
+  .top a{
+    transition: all 0.5s;
+  }

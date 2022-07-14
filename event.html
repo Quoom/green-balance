@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1500">
+    <title>그린밸런스</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="images/logo_favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <!-- aos적용하기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 내 스타일적용은 항상 마직막으로 -->
+    <link rel="stylesheet" href="css/event.css">
+  </head>
+<body>
+  <div id="head">
+    <div id="head_inner" >
+        <div class="logo">
+          <a href="index.html"><img src="images/head_logo.png" alt="헤드로고"></a>
+        </div><!-- logo -->
+        <ul class="gnb clearfix">
+            <li><a href="about.html">ABOUT<div class="solid"></div></a>
+              <!-- 서브메뉴만들기, a태그 뒤에 만듭니다. -->
+              <ul class="sub">
+                <li><a href="about.html#b_story">브랜드 스토리</a></li>
+                <li><a href="about.html#concept">브랜드 컨셉</a></li>
+              </ul>
+            </li>
+            <li><a href="menu.html">MENU<div class="solid"></div></a>
+              <ul class="sub">
+                <li><a href="menu.html#sp_menu">스페셜 메뉴</a></li>
+                <li><a href="menu.html#main_menu">메인 메뉴</a></li>
+                <li><a href="menu.html#beverage">음료 메뉴</a></li>
+              </ul>    
+            </li>
+            <li><a href="event.html">ENENT<div class="solid"></div></a>
+            </li>
+            <li><a href="store.html">STORE<div class="solid"></div></a>
+              <ul class="sub">
+                <li><a href="store.html#time">예약하기</a></li>
+                <li><a href="store.html#map">오시는 길</a></li>
+              </ul>
+            </li>
+        </ul><!-- gnb -->
+    </div><!-- head_inner, 마진오토 -->
+</div><!-- head, bg:c -->
+    <div id="mb">
+        <div class="moving">
+          <div class="text">
+            <h1>Enjoy with<br> &nbsp; &nbsp; &nbsp; Our Event</h1>
+            <!-- 글자에 여백넣기 특수문자 &nbsp; -->
+            <h4>그린밸런스의 다양한 <span>이벤트를 </span>함께 즐겨보세요  </h4>
+          </div>
+          <div class="berry" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <img src="images_e/berry.png" alt="블루베리">
+          </div>
+          <div class="fig" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+            <img src="images_e/fig.png" alt="무화과">
+          </div>
+          </div><!-- moving -->
+    </div><!--mb, m:a, 포지션 -->
+    <div id="event">
+      <ul class="clearfix">
+        <li class="zero">
+          <a href="#">
+            <img src="images_e/event1.jpg" alt="제로">
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+            <img src="images_e/event2.jpg" alt="샌드위치" >
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+           <img src="images_e/event3.jpg" alt="카카오">
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+           <img src="images_e/event4.jpg" alt="인스타">
+          </a>
+        </li>
+        <li class="card">
+          <a href="#">
+           <img src="images_e/event5.jpg" alt="카드할인" >
+         </a> 
+        </li>
+      </ul>
+    </div>  
+
+    <div id="footer">
+      <div id="footer_inner" class="clearfix">
+        <!-- <div class="top"><a href="#"><img src="images/top_btn.png" alt="탑버튼"></a></div> -->
+        <div class="top"><a href="#">TOP</a></div>
+        <ul class="logo">
+          <li><img src="images/footer_logo.png" alt="푸터로고"></li>
+          <li>대표이사:김민수  주소 : 부산광역시 남구 못골번영로 60번길 1층 | 그린밸런스 대표전화:051-525-5081 <br>
+           © Copyright 2022. 그린밸런스. All right reserved</li>
+        </ul><!-- logo -->
+        <ul class="footer_icon">
+          <li><a href="#"><img src="images/insta_icon.png" alt="인스타이이콘"></a></li>
+          <li><a href="#"><img src="images/youtube_icon.png" alt="유투브이이콘"></a></li>
+          <li><a href="#"><img src="images/ch_icon.png" alt="체널이이콘"></a></li>
+          <li><a href="#"><img src="images/face_icon.png" alt="페이스북이이콘"></a></li>
+        </ul><!-- footer_icon -->
+      </div><!-- footer_inner -->
+    </div><!-- footer -->
+
+  <!-- aos작동용 스크립트 -->
+  <script>
+  AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+@charset "utf-8";
+/* font-family: 'Oswald', sans-serif; -영어*/
+/* font-family: 'Gowun Batang', serif; -명조*/
+/* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;    
+    color: inherit;
+
+}
+ul, ol{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size:14px;
+    line-height: 24px;
+    color:#333;
+    min-width:1500px;
+}
+/* .Oswald{
+  font-family: 'Oswald', sans-serif;
+} 폰트를 연결하는 다른방법, 
+클래스 설정 후, html파일에 클래스명을 넣어서 씁니다. */
+
+img, video{
+  vertical-align: middle;
+/* 이미지 하단 빈틈을 없게 하기, 이미지를 블락시키면, 
+텍스트 얼라인이 안먹힘, 그래서 대신 사용한 방법 */
+}
+
+
+/* head */
+#head{
+  background-color: #fff;   
+  position: fixed;
+  top: 0;    
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+#head_inner{
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#head_inner .logo{
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right: 390px;
+}
+.gnb{
+  display: flex; 
+}/* 기준 */
+.gnb>li{
+  font-family: 'Oswald', sans-serif;
+  color: #1e4a43;
+  font-size: 24px;
+  font-weight: 400;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  width: 25%;
+  /*기준이 되는 li아래에 공간을 만들어 줍니다. */
+}
+/*  하이퍼링크 설정  */
+.gnb{
+	text-transform:uppercase;
+}	
+.gnb>li>a{display:block;
+		font-size:25px;}
+.gnb>li>a:hover{color:#439386;}
+.solid{
+   width:100px;
+		margin:auto;
+		margin-top:10px;
+		height:5px;
+		background:#439386;
+		visibility:hidden;
+		opacity:0;
+		transform:scaleX(0);
+		transition-property: opacity, transform;
+		transition-duration:0.5s;}
+.gnb>li>a:hover .solid{transform:scaleX(1);
+						opacity:1;
+						visibility:visible;}	
+
+/* sub, 서브메뉴 만들기 */
+.sub{
+position:absolute;
+left:50%;
+transform: translateX(-50%) scaleY(0);
+top:100%;
+width:100%;
+z-index: 10;
+}
+.sub li a{
+display: block;
+background-color:rgba(0, 0, 0, 0.5);
+font-size:14px;
+font-weight: 400;
+padding: 5px 0;
+color:#fff;
+transform: scaleX(0.95);/* 글자 가로로 축고 */
+}
+.sub li a:hover{
+transition: color, background 0.5s;
+}
+.gnb>li{
+position:relative;
+}
+
+/*css로 서브메뉴 움직이면서 나타나게 만들기*/
+.sub{
+opacity:0;/*완전투명상태*/
+transform: translateX(-50%) scaleY(0);
+/*높이를 0으로 만듦*/
+transform-origin: top;
+/*변형기준점을 top으로 변경해줌,
+hover가 있는 선택자에 사용하지 않습니다.*/
+}
+.gnb>li:hover>.sub{
+opacity: 1;
+transform: translateX(-50%) scaleY(1);
+}
+.gnb>li>.sub{
+transition:all 0.5s;
+/* 사라질때도 부드럽게~ */
+}
+
+
+  /* mb */
+  #mb{
+    padding-bottom: 200px;
+    width: 100%;
+    margin-top: 110px;
+    text-align: center;
+  }  
+  /* box */
+  #box{
+    width: 1320px;
+    margin: 0 auto;
+  }
+  #time{
+    margin: 0 auto;
+    width: 380px;
+    height: 198px;
+  }
+  .door{
+    float: left;
+  }
+  .text{
+    float: right;
+  }
+  .text>p{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .sub_title{
+    font-weight: 400;
+    font-size: 32px;
+    padding-bottom: 50px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .bg{
+    background-image: url(../images_s/reserv.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 0 auto;
+    width: 100%;
+    height: 520px;
+    padding-bottom: 134px;
+    position: relative;
+  }
+  #map{
+    margin: 0 auto;
+    width: 390px;
+    height: 160px;
+  }
+  #map img{
+    float: left;
+  }
+  .text2{
+    float: right;
+  }
+  .text2>p{
+    font-weight: 400;
+    font-size: 18px;
+    padding-right: 43px;
+  }
+  .bg2 img{
+    float: left;
+  }
+  .bg2 iframe{
+    display: block;
+  }
+  .veggie{
+    background-image:url(../images_s/bg.png);
+    background-repeat: no-repeat;
+    background-position: center -50px;
+    height: 550px;
+  }
+
+  /* 폼태그 만들기 */
+  .form{
+    width:400px;
+    margin:100px auto;
+    padding:30px;
+    /* box-shadow:5px 5px 5px rgba(0,0,0,0.2); */
+    overflow:hidden;
+    position: absolute;
+    top: -80px;
+    left: 30px;
+  }
+  .form h1{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 15px;
+  }
+  input{
+    box-sizing:border-box;
+    border:none;
+    outline-style:none;
+    background:#fff;
+    /* 글자들어가는 부분 색상 */
+    padding:10px;
+  }
+  .submit{
+    width:100%;
+    background:#3c644a;
+    color:#fff;
+    border:none;
+    padding:20px;
+    box-sizing:border-box;
+    border-radius:29px;
+    cursor:pointer;
+    letter-spacing: 5px;
+  }
+  .left{
+    float:left;}
+  .right a:nth-child(1){
+    color:#777;
+    font-weight:bold;
+  }
+  .right{
+    float:right;
+  }
+  p input{
+    margin-right:10px;}
+  table input
+  {
+    width:100%; 
+    box-sizing:border-box;
+    }
+  textarea{
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    border:none;
+    background:#fff;
+    outline-style:none;
+    height:100px;}
+    /*  비고 적는칸 */
+  table{
+    width:100%;
+  }
+  table td{
+    width:80%;
+    padding-bottom:5px;
+  }
+  table th{
+    width:20%;
+    text-align:left;
+  }
+  .remark{
+    vertical-align : top;
+    padding-top:5px;
+  }
+  .read{
+    width:100%;
+    height:150px;
+    overflow:auto;
+    background:#eee;
+  }
+  .check{
+    padding-bottom:10px;
+  }  
+
+  /* footer */
+  #footer{
+    background-color: #3c3734;
+/* 배경이 왜 100% 안찰까??다른페이지는 되는뎅:box에 닫힘 태그가 없어졌음 ㅎㅎ */
+  }
+  #footer_inner{
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .logo li{
+    float: left;
+    color: #ccc;
+    padding-top: 50px;
+    padding-right: 30px;
+  }
+  .footer_icon li{
+    float: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .footer_icon{
+    float: right;
+  }
+  .footer_icon a{
+    display: block;
+    padding-top: 50px;
+    border-radius: 20%;
+  }
+  .footer_icon li:nth-child(4){
+    padding-right: 0;
+  }
+  .footer_icon li img{
+    opacity: 50%;
+  }
+  .footer_icon li a:hover img{
+    opacity: 100%;
+    transform: translateY(-10px);
+    /* box-shadow: 0 5px 5px rgb(255, 255, 255, 15%); */
+    /* 그림자를 따로 만들어야 되려나? */
+  }
+  .footer_icon li:hover{
+    background-image: url(../images/sahdow.png);
+    background-repeat: no-repeat;
+    background-position:10px bottom;
+  }
+  .footer_icon li a img{
+    transition: all 0.5s;
+  }
+  .top{
+    position: fixed;  
+    bottom: 110px;
+    right: 100px;
+    /* 포지션+보텀+레프트 수치는 세트로~ */
+  }
+  .top a{
+    background-color: #1e4a43;
+    color: #fff;
+    border-radius: 50%;
+    width: 83px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;    
+    text-align: center;
+    line-height: 83px;
+    display: inline-block;
+  }
+  .top a:hover{
+    background-color: #238173;
+    color: #fff;
+  }
+  .top a{
+    transition: all 0.5s;
+  }

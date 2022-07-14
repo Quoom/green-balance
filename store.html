@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1500">
+    <title>그린밸런스</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="shortcut icon" href="images/logo_favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <!-- aos적용하기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 내 스타일은 제일아래-->
+    <link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+  <div id="head">
+    <div id="head_inner" >
+        <div class="logo">
+          <a href="index.html"><img src="images/head_logo.png" alt="헤드로고"></a>
+        </div><!-- logo -->
+        <ul class="gnb clearfix">
+            <li><a href="about.html">ABOUT<div class="solid"></div></a>
+              <!-- 서브메뉴만들기, a태그 뒤에 만듭니다. -->
+              <ul class="sub">
+                <li><a href="about.html#b_story">브랜드 스토리</a></li>
+                <li><a href="about.html#concept">브랜드 컨셉</a></li>
+              </ul>
+            </li>
+            <li><a href="menu.html">MENU<div class="solid"></div></a>
+              <ul class="sub">
+                <li><a href="menu.html#sp_menu">스페셜 메뉴</a></li>
+                <li><a href="menu.html#main_menu">메인 메뉴</a></li>
+                <li><a href="menu.html#beverage">음료 메뉴</a></li>
+              </ul>    
+            </li>
+            <li><a href="event.html">ENENT<div class="solid"></div></a>
+            </li>
+            <li><a href="store.html">STORE<div class="solid"></div></a>
+              <ul class="sub">
+                <li><a href="store.html#time">예약하기</a></li>
+                <li><a href="store.html#map">오시는 길</a></li>
+              </ul>
+            </li>
+        </ul><!-- gnb -->
+    </div><!-- head_inner, 마진오토 -->
+</div><!-- head, bg:c -->
+
+
+    <div id="mb">
+        <!-- <img src="images_s/mb.jpg" alt="메인배너이미지로 일단~"> -->
+        <video src="images_s/mb.mp4" autoplay muted loop></video>
+        <!-- 내가 만든 동영상은 아이프레임태그가 아니고, 비디오 태그입니다.
+         autoplay:자동재생 muted:음소거)필수 loop:반복재생-->
+    </div><!-- mb -->
+    <div id="box"><!-- 예약+지도-->
+        <div id="time"><!-- 아이콘과 텍스트 -->
+            <img src="images_s/door_icon.png" alt="도어아이콘" class="door">
+        <div class="text">
+            <h2 class="sub_title">0PEN HOURS</h2>
+            <p> Monday - Friday  10pm - 9am<br>
+                Saturday -Sunday 11pm - 10am 
+            </p>
+        </div><!-- text -->
+       </div><!-- time -->
+        <div class="bg"><!-- 배경:bg, 폼태그 -->
+            <div class="form">
+                <h1>Book a Table</h1>
+                <form>
+                    <table>
+                    <tr>
+                        <th><label for="name">Name</label></th>
+                        <td><div><input type="text" id="name" placeholder="NAME"></div></td>
+                    </tr>
+                    <tr>
+                        <th><label for="pass">Password</label></th>
+                        <td><input type="password" id="pass" maxlength="8" placeholder="PASSWORD"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="phone">Number</label></th>
+                        <td><input type="numb" id="phone" placeholder="'-'는 빼고 입력해주세요"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="date">Date</label></th>
+                        <td><input type="date" id="date"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="date">Party size</label></th>
+                        <td>
+                            <input type="number" min="1" value="1">
+                        </td>
+                    </tr>
+                        <th class="remark">
+                            <label for="remarks">Memo</label>
+                        </th>
+                        <td><textarea id="remarks" placeholder="그 외 문의사항을 적어주세요"></textarea>
+                        </td>
+                    </tr>
+                    </table>
+                    <div><input type="submit" value="예약하기" class="submit"></div>
+                </form>
+                </div><!-- form, 폼태그 -->
+        </div><!-- bg, 예약이미지 -->
+        <div id="map"><!-- 아이콘+텍스트 -->
+            <img src="images_s/map_icon.png" alt="맵아이콘배경" class="map">
+            <div class="text2">
+            <h2 class="sub_title">WAY TO COME</h2>
+            <p> 남구 못골번영로 60번길 1층</p>
+            </div><!-- text2 -->
+       </div><!-- map -->
+        <div class="bg2"><!-- 구글맵 가져오기 -->
+            <img src="images_s/map.jpg" alt="지도옆 아이콘 이미지">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1631.3069369844861!2d129.08951151218508!3d35.1413081376506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ec8cd8b4e427%3A0x20aee121734586b6!2z7IGY66CI6rOgKENhZmUgUHJlZ28p!5e0!3m2!1sko!2skr!4v1657443935183!5m2!1sko!2skr" 
+            width="789" height="500" 
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div><!--bg2-->
+       </div><!-- box -->
+       <div class="veggie"></div><!-- 야채이미지, bg로 -->
+
+    <div id="footer">
+        <div id="footer_inner" class="clearfix">
+          <!-- <div class="top"><a href="#"><img src="images/top_btn.png" alt="탑버튼"></a></div> -->
+          <div class="top"><a href="#">TOP</a></div>
+          <ul class="logo">
+            <li><img src="images/footer_logo.png" alt="푸터로고"></li>
+            <li>대표이사:김민수  주소 : 부산광역시 남구 못골번영로 60번길 1층 | 그린밸런스 대표전화:051-525-5081 <br>
+             © Copyright 2022. 그린밸런스. All right reserved</li>
+          </ul><!-- logo -->
+          <ul class="footer_icon">
+            <li><a href="#"><img src="images/insta_icon.png" alt="인스타이이콘"></a></li>
+            <li><a href="#"><img src="images/youtube_icon.png" alt="유투브이이콘"></a></li>
+            <li><a href="#"><img src="images/ch_icon.png" alt="체널아이콘"></a></li>
+            <li><a href="#"><img src="images/face_icon.png" alt="페이스북이이콘"></a></li>
+          </ul><!-- footer_icon -->
+        </div><!-- footer_inner -->
+      </div><!-- footer -->
+    
+      <!-- 애니메이션 주기 옵션 -->
+    <script>AOS.init();</script>
+</body>
+</html>

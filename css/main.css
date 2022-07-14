@@ -1,0 +1,725 @@
+@charset "utf-8";
+/* font-family: 'Oswald', sans-serif; -영어*/
+/* font-family: 'Gowun Batang', serif; -명조*/
+/* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
+@keyframes zoom {
+    from{transform:scale(1.1);}
+    to{transform:scale(1);}	
+  }
+  .swiper-slide-active{
+    animation:zoom 2s;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;    
+    color: inherit;
+
+}
+ul, ol{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    /* 폰트를 연결하는 다른방법: 클래스 설정 후, 
+     html파일에 클래스명을 넣어서 씁니다. */
+    font-size:14px;
+    line-height: 24px;
+    color:#333;
+    min-width:1500px;
+}
+
+img, video{
+  vertical-align: middle;
+/* 이미지 하단 빈틈을 없게 하기, 이미지를 블락시키면, 
+텍스트 얼라인이 안먹힘, 그래서 대신 사용한 방법 */
+}
+
+
+/* head */
+#head{
+  background-color: #fff;   
+  position: fixed;
+  top: 0;    
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+#head_inner{
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#head_inner .logo{
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right: 390px;
+}
+.gnb{
+  display: flex; 
+}/* 기준 */
+.gnb>li{
+  font-family: 'Oswald', sans-serif;
+  color: #1e4a43;
+  font-size: 24px;
+  font-weight: 400;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  width: 25%;
+  /*기준이 되는 li아래에 공간을 만들어 줍니다. */
+}
+/*  하이퍼링크 설정  */
+.gnb{
+	text-transform:uppercase;
+}	
+.gnb>li>a{display:block;
+		font-size:25px;}
+.gnb>li>a:hover{color:#439386;}
+.solid{
+   width:100px;
+		margin:auto;
+		margin-top:10px;
+		height:5px;
+		background:#439386;
+		visibility:hidden;
+		opacity:0;
+		transform:scaleX(0);
+		transition-property: opacity, transform;
+		transition-duration:0.5s;}
+.gnb>li>a:hover .solid{transform:scaleX(1);
+						opacity:1;
+						visibility:visible;}	
+
+/* sub, 서브메뉴 만들기 */
+.sub{
+position:absolute;
+left:50%;
+transform: translateX(-50%) scaleY(0);
+top:100%;
+width:100%;
+z-index: 10;
+}
+.sub li a{
+display: block;
+background-color:rgba(0, 0, 0, 0.5);
+font-size:14px;
+font-weight: 400;
+padding: 5px 0;
+color:#fff;
+transform: scaleX(0.95);/* 글자 가로로 축고 */
+}
+.sub li a:hover{
+transition: color, background 0.5s;
+}
+.gnb>li{
+position:relative;
+}
+
+/*css로 서브메뉴 움직이면서 나타나게 만들기*/
+.sub{
+opacity:0;/*완전투명상태*/
+transform: translateX(-50%) scaleY(0);
+/*높이를 0으로 만듦*/
+transform-origin: top;
+/*변형기준점을 top으로 변경해줌,
+hover가 있는 선택자에 사용하지 않습니다.*/
+}
+.gnb>li:hover>.sub{
+opacity: 1;
+transform: translateX(-50%) scaleY(1);
+}
+.gnb>li>.sub{
+transition:all 0.5s;
+/* 사라질때도 부드럽게~ */
+}
+
+/* swiper mb */
+.mb{
+    margin-top: 114px;
+}
+/* 메뉴는 고정이므로, mb에 마진을 줘야합니다. */
+
+.mb1{
+    background-image: url(../images/mb_banner1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 825px;
+}
+.mb2{
+    background-image: url(../images/mb_banner2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 825px;
+}
+.mb3{
+    background-image: url(../images/mb_banner3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 825px;
+}
+.mb img{
+    width:100%;
+  }
+  .mb .swiper-button-next,
+  .mb .swiper-button-prev{
+    color:rgb(77, 133, 61);
+  }
+  .mb .swiper-pagination>span{
+    background-color: rgb(77, 133, 61);
+  }
+  /* What is~*/
+.title_box1{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+/* 긴가로형, 혁신푸드/여자모델 */
+.title_box2{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+/* 영어타이틀 */
+.mb_title{
+    color: #fbe87c;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 94px;
+}
+/* 한글타이틀 */
+.mb_title2{
+    color: #fff;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+    padding-top: 35px;
+}
+/* 메인배너의 뷰모어 버튼 */
+.mb_btn{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    width: 120px;
+    background-image: url(../images/viewmore_btn2.png);
+    background-position: 80px center;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+}
+.mb_btn:hover{
+    background-position: 86px center;
+}
+.mb_btn{
+  transition: all 0.5s;
+}
+
+.mb_btn2 img{
+    width: 100%;
+}
+.title_box2 h4{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+    padding-top: 25px;
+}
+/* 영어 서브타이틀 */
+.sub_title{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    font-weight: 200;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+    line-height: 40px;
+}
+/* menu, 그린밸런스의 대표메뉴  */
+#menu{
+    margin: 0 auto;
+    width: 1320px;
+    text-align: center;
+    margin-bottom: 200px;
+  }
+.title{
+    padding-top: 200px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.m_title{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+.menu p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #000;
+}
+.menu_btn{
+  display: inline-block;
+  border: 1px solid #666;
+  padding: 10px 20px 10px 12px;
+  margin-bottom: 50px;
+  width: 140px;
+  background-image: url(../images/fork_icon.png);
+  background-position: 85px center;
+   /* 메뉴더보기 버튼 모양이 잘 안잡힐때는 포지션으로 조절 */
+  background-repeat: no-repeat;
+  text-align: left;
+  vertical-align: center;
+}
+.menu_btn:hover{
+  background-image: url(../images/fork_icon.png);
+  background-position: 95px;
+ }
+ .menu_btn{
+  transition: all 0.6s;
+}
+.menu .swiper-pagination>span{
+    background-color: rgb(77, 133, 61);
+  }
+  .main1{
+    background-image: url(../images/bg1.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+  .main2{
+    background-image: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+  .main3{
+    background-image: url(../images/bg3.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+  .main4{
+    background-image: url(../images/bg4.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+  .main5{
+    background-image: url(../images/bg5.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+  .main6{
+    background-image: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+  /* 음식이미지 */
+  .menu img{
+    padding-top: 100px;
+    padding-bottom: 43px;
+  }
+  .menu img:hover{
+    transform: scale(1.08);
+  }
+  .menu img{
+    transition: all 0.5s;
+  }
+
+  #menu p{
+    margin-top: 10px;
+  }
+
+  /* main_event*/
+  #main_event{
+    background-image: url(../images/main_family.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 490px;
+    width: 100%;
+    margin:  0 auto;
+    margin-bottom: 200px;
+  }
+
+  /* slogan :왜 식물성 식품이 필요할까?텍스트 */
+  #slogan{
+    width: 1400px;
+    margin: 0 auto;
+  }
+  /* 아보카도 이미지 */
+  .s_img{
+    float: left;
+    height: 499px;
+    width: 639px;
+  }
+  .s_text{
+    float: right;
+    width: 710px;
+  }
+  .s_text h2{
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 300;
+    padding-bottom: 54px;
+  }
+  span{
+    font-weight: 600;
+  }
+  .icon{
+    display: flex;
+    align-items: flex-end;
+    /* 원래는 위쪽 기준인데, 아래쪽 기준으로 맞추는 방법 */
+  }
+
+  .icon li{
+    text-align: center;
+    padding-right: 40px;
+  }
+  .icon h4{
+    padding-top: 53px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .icon p{
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .icon a:hover img{
+    opacity: 70%;
+    transform: translateY(-10px);
+  }
+  .icon a img{
+    transition: all 0.5s;
+  }
+
+  /* main_slogan */
+  #main_slogan{
+    background-image: url(../images/main_slogan.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 451px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+
+  /* event, sns이벤트 배너 */
+  #event{
+    width: 1320px;
+    margin: 0 auto;
+  }
+  #event ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  #event ul li{
+    display: block;
+  }
+  .bold{
+    font-weight: 700;
+  }
+  .event{
+    font-size: 25px;
+  }
+  .box{
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    padding-top: 2px;
+
+  }
+  .e_title{
+    padding-top: 25px;
+    padding-bottom: 30px;
+    font-weight: 300;
+    font-size: 35px;
+  }
+  .date{
+    padding-bottom: 17px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .text{
+    padding-top: 18px;
+    padding-bottom: 35px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 300;
+  }
+  .date{
+    padding-bottom: 54px;
+  } 
+  #zero .event{
+     color: #997155;
+   }
+   #zero .e_title{
+    color: #997155;
+  }
+   #zero .box{
+    background-color: #b78c6d;
+    color: #fff;
+   }
+   #kakao .event{
+    color: #43352e;
+  }
+  #kakao .e_title{
+    color: #43352e;
+  }
+  #kakao .box{
+   background-color: #f6d940;
+   color: #43352e;
+  }
+  #insta .event{
+    color: #5d3a5b;
+  }
+  #insta .e_title{
+    color: #5d3a5b;
+  }
+  #insta .box{
+   background-color: #5d3a5b;
+   color: #fff;
+  }
+  #insta> .date{
+    padding-top: 61px;
+  }
+  #event ul li:hover a img{
+    transform: scale(1.1, 1.1); 
+  }
+  #event ul li a img{
+    transition: all 0.5s;
+  }/* 트랜지션을 할때는, 나갈때도 부드럽게 하기 위해서,
+    transform이 들어간 동일 선택자를 복사해서,
+    호버만 삭제 후, 적용해준다.*/
+  #event ul li>a{
+    overflow: hidden;
+    display: block;
+    width: 428px;
+    height: 351px;
+  }  
+ 
+  /* store: 예약 및 장소 */
+  #store{
+    margin: 0 auto;
+    width: 1320px;
+    height: 1100px;
+    /* 포지션으로 높이를 잡았을때는, 클픽이 안먹힘, 
+    그래서 꼭 높이를 지정해줄것!! */
+  }
+  #store_inner{
+    position: relative;
+  }
+  #store h2{
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 200px;
+  }
+  .restaurant{
+    background-image: url(../images/reserv1.png);
+    background-repeat: no-repeat;
+    width: 669px;
+    height: 620px;
+    /* background-image가 적용될 공간을 설정해야 호버가 같이 먹힙니다. */
+    position: absolute;
+    left: 0;
+    top: 330px;
+  }
+  .restaurant a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 내용이 없어서 a태그가 안 먹힐때 쓰는방법 */
+  }
+  .restaurant:hover{
+    background-image: url(../images/reserv1_1.png);
+    transition: all 0.6s;
+  }
+  .restaurant{
+    transition: all 0.6s;
+  }
+  #store .title{
+    text-align: center;
+  }
+  /* .reserv{
+    background-image: url(../images/reserv2.png);
+    background-position: center center;
+    width: 620px;
+    height: 302px;
+    position: absolute;
+    right: 0;
+    top: 330px;
+  }
+  
+  .reserv:hover{
+    background-size: 120%;
+  } 
+  bg를 움직이고 싶을땐, bg사이즈를 조절합니다.
+  그리고 bg에 호버시 트랜지션은 안먹힙니다.*/
+  .reserv{
+    background-image: url(../images/reserv2.png);
+    width: 620px;
+    height: 302px;
+    position: absolute;
+    right: 0;
+    top: 330px;
+  }
+  .reserv:hover img{
+    transform: scale(1.3, 1.3) translateY(-15px); 
+  }
+  .reserv img{
+    transition: all 0.5s;
+  }
+  .reserv a:hover{
+    background-color: #e3a200;
+    color: #fff;
+    border: none;
+  }
+  .map{
+    background-image: url(../images/map.png);
+    width: 620px;
+    height: 302px;
+    position: absolute;
+    right: 0;
+    top: 648px;
+  }
+  .map:hover img{
+    transform: scale(1.3, 1.3) translateY(-15px); 
+  }
+  .map img{
+    transition: all 0.5s;
+  }
+  .map a:hover{
+    background-color: #238173;
+    color: #fff;
+    border: none;
+  }
+  .btn3{
+    display: inline-block;
+    text-align: center;
+    width: 130px;
+    font-size: 23px;
+    font-weight: 500;
+    border: 1px solid #333;
+    padding: 7px 0;
+    margin-left: 35px;
+    margin-top: 25px;
+  }
+  .btn4{
+    display: inline-block;
+    text-align: center;
+    width: 130px;
+    font-size: 23px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    color: #ccc;
+    padding: 7px 0;
+    margin-left: 35px;
+    margin-top: 25px;
+  }
+  .reserv img{
+    display: block;
+    padding-top: 142px;
+    padding-left: 35px;
+  }
+  .map img{
+    display: block;
+    padding-top: 142px;
+    padding-left: 35px;
+  }
+
+  /* footer */
+#footer{
+  background-color: #3c3734;
+}
+#footer_inner{
+  width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 30px;
+}
+.logo li{
+  float: left;
+  color: #ccc;
+  padding-top: 50px;
+  padding-right: 30px;
+}
+.footer_icon li{
+  float: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.footer_icon{
+  float: right;
+}
+.footer_icon a{
+  display: block;
+  padding-top: 50px;
+  border-radius: 20%;
+}
+.footer_icon li:nth-child(4){
+  padding-right: 0;
+}
+.footer_icon li img{
+  opacity: 50%;
+}
+.footer_icon li a:hover img{
+  opacity: 100%;
+  transform: translateY(-10px);
+  /* box-shadow: 0 5px 5px rgb(255, 255, 255, 15%); */
+  /* 그림자를 따로 만들어야 되려나? */
+}
+.footer_icon li:hover{
+  background-image: url(../images/sahdow.png);
+  background-repeat: no-repeat;
+  background-position:10px bottom;
+}
+.footer_icon li a img{
+  transition: all 0.5s;
+}
+.top{
+  position: fixed;  
+  bottom: 110px;
+  right: 100px;
+  /* 포지션+보텀+레프트 수치는 세트로~ */
+}
+.top a{
+  background-color: #1e4a43;
+  color: #fff;
+  border-radius: 50%;
+  width: 83px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;    
+  text-align: center;
+  line-height: 83px;
+  display: inline-block;
+}
+
+.top a:hover{
+  background-color: #238173;
+  color: #fff;
+}
+.top a{
+  transition: all 0.5s;
+}

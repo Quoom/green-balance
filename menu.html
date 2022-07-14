@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1500">
+    <title>그린밸런스</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="shortcut icon" href="images/logo_favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <!-- aos적용하기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 내 스타일은 제일아래-->
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div id="head">
+        <div id="head_inner" >
+            <div class="logo">
+              <a href="index.html"><img src="images/head_logo.png" alt="헤드로고"></a>
+            </div><!-- logo -->
+            <ul class="gnb clearfix">
+                <li><a href="about.html">ABOUT<div class="solid"></div></a>
+                  <!-- 서브메뉴만들기, a태그 뒤에 만듭니다. -->
+                  <ul class="sub">
+                    <li><a href="about.html#b_story">브랜드 스토리</a></li>
+                    <li><a href="about.html#concept">브랜드 컨셉</a></li>
+                  </ul>
+                </li>
+                <li><a href="menu.html">MENU<div class="solid"></div></a>
+                  <ul class="sub">
+                    <li><a href="menu.html#sp_menu">스페셜 메뉴</a></li>
+                    <li><a href="menu.html#main_menu">메인 메뉴</a></li>
+                    <li><a href="menu.html#beverage">음료 메뉴</a></li>
+                  </ul>    
+                </li>
+                <li><a href="event.html">ENENT<div class="solid"></div></a>
+                </li>
+                <li><a href="store.html">STORE<div class="solid"></div></a>
+                  <ul class="sub">
+                    <li><a href="store.html#time">예약하기</a></li>
+                    <li><a href="store.html#map">오시는 길</a></li>
+                  </ul>
+                </li>
+            </ul><!-- gnb -->
+        </div><!-- head_inner, 마진오토 -->
+    </div><!-- head, bg:c -->
+    
+    <div id="mb"><!-- 중간배너 -->
+      <div class="moving">
+        <h1>What are <br> on Menu?</h1>
+        <h4>그린밸런스의 균형잡힌 <br> 
+            <span>다양한 메뉴</span>를 만나보세요. </h4>
+        <img src="images_m/pumpkin1.png" alt="호박이미지1" class="pumpkin1" 
+        data-aos="fade-up"
+        data-aos-easing="ease-out-back"
+        data-aos-duration="2000" ><!-- p:a -->
+        <img src="images_m/pumpkin2.png" alt="호박이미지2" class="pumpkin2"
+        data-aos="slide-right" data-aos-duration="1000" data-aos-delay="100"><!-- p:a -->
+     </div><!--p:r,기준임-->
+    </div><!-- mb, 이미지 배경으로 넣기 -->
+
+    <div id="sp_menu">
+        <h2 class="sub_title">SPECIAL MEMU</h2>
+        <ul >
+            <li>
+                <a href="#"><img src="images_m/s_menu1.png" alt="스페셜메뉴1"></a>
+                <h3 class="sp_title">포테이토 머슈롬 피자</h3>
+                <p class="text">
+                에어프라이드 포테이토가 토핑으로 올라가<br>
+                바삭하고 버섯의향이 드라이된 피자
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/s_menu2.png" alt="스페셜메뉴2"></a>
+                <h3 class="sp_title">두부 치즈 퐁듀 스프</h3>
+                <p class="text">
+                    단백질이 듬뿍 들어간 영양만점 두부를<br>
+                    치즈와 우유에 긇여낸 진한 스프
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/s_menu3.png" alt="스페셜메뉴3"></a>
+                <h3 class="sp_title">통새우 파르팔레 파스타</h3>
+                <p class="text">
+                    신선한 새우를 바질허브에 볶아 향이 일품인<br>
+                    나비모양의 파스타
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/s_menu4.png" alt="스페셜메뉴4"></a>
+                <h3 class="sp_title">퀴노아&블랙빈 함박스테이크</h3>
+                <p class="text">
+                    세계 슈퍼푸드로 선정된 곡물인 퀴노아와<br>
+                    항노화 검정콩이 들어간 함박스테이크
+                </p>
+            </li>
+        </ul>
+    </div><!-- sp_menu,w,m -->
+
+    <!-- <div id="mb2">두번째 배너 -->
+        <!-- <h1 class="title">MENU <br> &BEVERAGE</h1> -->
+      <!-- </div>mb, 이미지 배경으로 넣기 -->
+
+    <div id="mb2">
+        <video src="images_m/menu_motion.mp4" autoplay muted loop></video>
+        <!-- 내가 만든 동영상은 아이프레임태그가 아니고, 비디오 태그입니다.
+         autoplay:자동재생 muted:음소거)필수 loop:반복재생-->
+
+    </div>
+    <div id="main_menu"><!-- 푸드 -->
+        <h2 class="sub_title">MAIN MEMU</h2>
+        <ul>
+            <li>
+                <a href="#"><img src="images_m/m_menu1.png" alt="메인메뉴1"></a>
+                <h3 class="ma_title">단호박 크림 스프</h3>
+                <p class="text">
+                잘익은 국산 단호박과 소이크림을<br>
+                우유에 넣어 끊인 속이 든든한 한끼 스프
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/m_menu2.png" alt="메인메뉴2"></a>
+                <h3 class="ma_title">포테이토 머슈롬 피자</h3>
+                <p class="text">
+                    에어프라이드 포테이토가 토핑으로 올라가<br>
+                    바삭하고 버섯의향이 드라이된 피자
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/m_menu3.png" alt="메인메뉴3"></a>
+                <h3 class="ma_title">대체육 비프 또띠아</h3>
+                <p class="text">
+                    대체육으로 만든 비프와<br>
+                    아삭한 할라피뇨가 양파랑 다져진 호밀 또띠아
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/m_menu4.png" alt="메인메뉴4"></a>
+                <h3 class="ma_title">대체육 치킨 샐러드</h3>
+                <p class="text">
+                    대체육 치킨이 진짜 치킨같은 식감으로<br>
+                    다이어터들에게 영양만점 다이어트 푸드로크
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="images_m/m_menu5.png" alt="메인메뉴1"></a>
+                <h3 class="ma_title">대체육 스테이크</h3>
+                <p class="text">
+                    진짜 소고와 질감이 거의 똑같은 대체육으로<br>
+                    조리한 스모키한 향이 살아있는 스테이크
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/m_menu6.png" alt="메인메뉴2"></a>
+                <h3 class="ma_title">치킨 아보카도 버거</h3>
+                <p class="text">
+                    소이소스로 맛을낸 대체육 치킨과<br>
+                    담백한 아보카드를 넣은 버거
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/m_menu7.png" alt="메인메뉴3"></a>
+                <h3 class="ma_title">그릴드 피쉬스테이크 파스타</h3>
+                <p class="text">
+                    오븐에 구워낸 대구와 투움바 파스타의 만남<br>
+                    버섯이 듬뿍 들어간 식감을 즐겨보세요
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/m_menu8.png" alt="메인메뉴4"></a>
+                <h3 class="ma_title">오징어 먹물&관자 파스타</h3>
+                <p class="text">
+                    오징어 먹물을 넣은 파스타로 신선한 해물육수로<br>
+                    조리되어 신선함 바다의 향을 즐길 수 있음
+                </p>
+            </li>
+        </ul>
+    </div><!-- main_menu -->
+    <div id="beverage"><!-- 음료 -->
+        <h2 class="sub_title">BEVERAGE</h2>
+        <ul>
+            <li>
+                <a href="#"><img src="images_m/b_menu1.png" alt="메인메뉴1"></a>
+                <h3 class="b_title">파인애플 선셋 아이스</h3>
+                <p class="text">
+                    달콤한 파인애플과 캐모마일 티,<br> 
+                    상큼한 라임이 청량하게 어우러진 음료
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/b_menu2.png" alt="메인메뉴2"></a>
+                <h3 class="b_title">핑크 캐모마일 릴렉서</h3>
+                <p class="text">
+                    캐모마일티에 유스베리티를 추가하여<br>
+                    색감과 향을 같이 즐길수 있는 따뜻한 
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/b_menu3.png" alt="메인메뉴3"></a>
+                <h3 class="b_title">브라운 슈가 라떼</h3>
+                <p class="text">
+                    디카페인 콜드브루와 브라운 슈가의<br> 
+                    달콤한 풍미즐길 수 있는 음료
+                </p>
+            </li>
+            <li>
+                <a href="#"><img src="images_m/b_menu4.png" alt="메인메뉴4"></a>
+                <h3 class="b_title">두유 크림 라떼</h3>
+                <p class="text">
+                    국산 두유를 갈아 만든 소이빈 크림이 듬뿍 들어가<br> 
+                    특유의 진한 풍미가 느껴지는 맛
+                </p>
+            </li>
+        </ul>
+    </div><!-- beverage -->
+
+    <div id="footer">
+      <div id="footer_inner" class="clearfix">
+        <!-- <div class="top"><a href="#"><img src="images/top_btn.png" alt="탑버튼"></a></div> -->
+        <div class="top"><a href="#">TOP</a></div>
+        <ul class="logo">
+          <li><img src="images/footer_logo.png" alt="푸터로고"></li>
+          <li>대표이사:김민수  주소 : 부산광역시 남구 못골번영로 60번길 1층 | 그린밸런스 대표전화:051-525-5081 <br>
+           © Copyright 2022. 그린밸런스. All right reserved</li>
+        </ul><!-- logo -->
+        <ul class="footer_icon">
+          <li><a href="#"><img src="images/insta_icon.png" alt="인스타이이콘"></a></li>
+          <li><a href="#"><img src="images/youtube_icon.png" alt="유투브이이콘"></a></li>
+          <li><a href="#"><img src="images/ch_icon.png" alt="체널이이콘"></a></li>
+          <li><a href="#"><img src="images/face_icon.png" alt="페이스북이이콘"></a></li>
+        </ul><!-- footer_icon -->
+      </div><!-- footer_inner -->
+    </div><!-- footer -->
+
+      <script>
+        AOS.init();
+        </script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+@charset "utf-8";
+/* font-family: 'Oswald', sans-serif; -영어*/
+/* font-family: 'Gowun Batang', serif; -명조*/
+/* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;    
+    color: inherit;
+
+}
+ul, ol{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size:14px;
+    line-height: 24px;
+    color:#333;
+    min-width:1500px;
+}
+/* .Oswald{
+  font-family: 'Oswald', sans-serif;
+} 폰트를 연결하는 다른방법, 
+클래스 설정 후, html파일에 클래스명을 넣어서 씁니다. */
+
+
+img, video{
+  vertical-align: middle;
+/* 이미지 하단 빈틈을 없게 하기, 이미지를 블락시키면, 
+텍스트 얼라인이 안먹힘, 그래서 대신 사용한 방법 */
+}
+
+
+/* head */
+#head{
+  background-color: #fff;   
+  position: fixed;
+  top: 0;    
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+#head_inner{
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#head_inner .logo{
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right: 390px;
+}
+.gnb{
+  display: flex; 
+}/* 기준 */
+.gnb>li{
+  font-family: 'Oswald', sans-serif;
+  color: #1e4a43;
+  font-size: 24px;
+  font-weight: 400;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  width: 25%;
+  /*기준이 되는 li아래에 공간을 만들어 줍니다. */
+}
+/*  하이퍼링크 설정  */
+.gnb{
+	text-transform:uppercase;
+}	
+.gnb>li>a{display:block;
+		font-size:25px;}
+.gnb>li>a:hover{color:#439386;}
+.solid{
+   width:100px;
+		margin:auto;
+		margin-top:10px;
+		height:5px;
+		background:#439386;
+		visibility:hidden;
+		opacity:0;
+		transform:scaleX(0);
+		transition-property: opacity, transform;
+		transition-duration:0.5s;}
+.gnb>li>a:hover .solid{transform:scaleX(1);
+						opacity:1;
+						visibility:visible;}	
+
+/* sub, 서브메뉴 만들기 */
+.sub{
+position:absolute;
+left:50%;
+transform: translateX(-50%) scaleY(0);
+top:100%;
+width:100%;
+z-index: 10;
+}
+.sub li a{
+display: block;
+background-color:rgba(0, 0, 0, 0.5);
+font-size:14px;
+font-weight: 400;
+padding: 5px 0;
+color:#fff;
+transform: scaleX(0.95);/* 글자 가로로 축고 */
+}
+.sub li a:hover{
+transition: color, background 0.5s;
+}
+.gnb>li{
+position:relative;
+}
+
+/*css로 서브메뉴 움직이면서 나타나게 만들기*/
+.sub{
+opacity:0;/*완전투명상태*/
+transform: translateX(-50%) scaleY(0);
+/*높이를 0으로 만듦*/
+transform-origin: top;
+/*변형기준점을 top으로 변경해줌,
+hover가 있는 선택자에 사용하지 않습니다.*/
+}
+.gnb>li:hover>.sub{
+opacity: 1;
+transform: translateX(-50%) scaleY(1);
+}
+.gnb>li>.sub{
+transition:all 0.5s;
+/* 사라질때도 부드럽게~ */
+}
+
+
+  /* mb, 첫번째배너 */
+  #mb{
+    background-image: url(../images_m/mb1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 711px;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .moving{
+    margin: 0 auto;
+    width: 1320px;
+    position: relative;
+  }    
+  .pumpkin1{
+    position: absolute;
+    top: 550px;
+    right: 215px;
+  }
+  .pumpkin2{
+    position: absolute;
+    top: 125px;
+    left: -280px;
+  }
+  #mb h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 104px;
+    padding-top: 189px;
+    color: #fff;
+   }
+   .moving h4{
+    padding-top: 62px;
+    font-size: 22px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 300;
+   }
+   .moving h4>span{
+    font-weight: 500;
+   }
+
+  /* sp_menu */
+  #sp_menu{
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #sp_menu ul li{
+    background-image: url(../images_m/bg_orang.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 70px;
+  }
+
+  #sp_menu ul li:hover img
+  {
+    transform: scale(1.08);
+  }
+  #sp_menu ul li img
+  {
+    transition: all 0.5s;
+  }
+  #sp_menu ul li:nth-child(4) a{
+    margin-right: 16px;
+  }
+  .sp_title{
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #ff9601;  
+   }
+   .text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  
+  /* 타이틀 공동 */
+  .sub_title{
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 55px;
+    font-family: 'Oswald', sans-serif;
+  }
+  #sp_menu ul{
+    display: flex;
+    /* align-items: flex-end; 끝을 맞출떄 사용 */
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+  
+   /* mb2, 두번째 배너 */
+   #mb2 video{
+    max-width: 100%;
+    /* 내가가진 크기보다 커지진 않습니다.
+    ㄴ줄이면 같이 줄어듭니다. */
+   }
+  #mb2{
+    text-align: center;
+    /* 영상을 가운데로 오게하기 위함,
+    max-width에는 마진이 */
+  }
+
+   /* main_menu */
+  #main_menu{
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #main_menu ul li{
+    background-image: url(../images_m/bg_green.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 60px;
+  }/* 이미지를 배경으로 넣어서 할수 있으까? */
+  #main_menu ul li:hover img
+  {
+    transform: scale(1.08);
+  }
+  #main_menu ul li img
+  {
+    transition: all 0.6s;
+  }
+  .ma_title{
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #4c7404;  
+   }
+   .text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  #main_menu ul{
+    display: flex;
+    /* align-items: flex-end; 끝을 맞출떄 사용 */
+    justify-content: space-between;
+    padding-bottom: 70px;
+  }
+  /* beverage: 음료 */
+  #beverage{
+    width: 1320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #beverage ul li{
+    background-image: url(../images_m/bg_pink.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+    padding-top: 30px;
+  }
+  #beverage ul li:hover img
+  {
+    transform: scale(1.08);
+  }
+  #beverage ul li img
+  {
+    transition: all 0.6s;
+  }
+  .b_title{
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #dc584b;  
+   }
+   .text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  #beverage ul{
+    display: flex;
+    /* align-items: flex-end; 끝을 맞출떄 사용 */
+    justify-content: space-between;
+    padding-bottom: 70px;
+  }
+  #beverage ul li:hover img
+  {
+    transform: scale(1.08);
+  }
+  #beverage ul li img
+  {
+    transition: all 0.6s;
+  }
+  #beverage h2{
+    padding-top: 50px;
+  }
+
+
+  /* footer */
+  #footer{
+    background-color: #3c3734;
+  }
+  #footer_inner{
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .logo li{
+    float: left;
+    color: #ccc;
+    padding-top: 50px;
+    padding-right: 30px;
+  }
+  .footer_icon li{
+    float: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .footer_icon{
+    float: right;
+  }
+  .footer_icon a{
+    display: block;
+    padding-top: 50px;
+    border-radius: 20%;
+  }
+  .footer_icon li:nth-child(4){
+    padding-right: 0;
+  }
+  .footer_icon li img{
+    opacity: 50%;
+  }
+  .footer_icon li a:hover img{
+    opacity: 100%;
+    transform: translateY(-10px);
+    /* box-shadow: 0 5px 5px rgb(255, 255, 255, 15%); */
+    /* 그림자를 따로 만들어야 되려나? */
+  }
+  .footer_icon li:hover{
+    background-image: url(../images/sahdow.png);
+    background-repeat: no-repeat;
+    background-position:10px bottom;
+  }
+  .footer_icon li a img{
+    transition: all 0.5s;
+  }
+  .top{
+    position: fixed;  
+    bottom: 110px;
+    right: 100px;
+    /* 포지션+보텀+레프트 수치는 세트로~ */
+  }
+  .top a{
+    background-color: #1e4a43;
+    color: #fff;
+    border-radius: 50%;
+    width: 83px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;    
+    text-align: center;
+    line-height: 83px;
+    display: inline-block;
+  }
+  
+  .top a:hover{
+    background-color: #238173;
+    color: #fff;
+  }
+  .top a{
+    transition: all 0.5s;
+  }
