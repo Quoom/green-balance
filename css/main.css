@@ -35,7 +35,12 @@ body{
     line-height: 24px;
     color:#333;
     min-width:1500px;
-    overflow-x: hidden;
+    overflow-x: hidden;/* 가로 스크롤 방지: 아마 aos가 왼쪽에서 날라와서 이런 가로 스크롤이 생기는거 같다. \
+    그걸 방지하기 위한 예방책 코드임 */
+}
+html{
+  overflow-x: hidden;/* 가로 스크롤 방지: 아마 aos가 왼쪽에서 날라와서 이런 가로 스크롤이 생기는거 같다. \
+  그걸 방지하기 위한 예방책 코드임 */
 }
 
 img, video{
