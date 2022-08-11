@@ -145,8 +145,9 @@ transition:all 0.5s;
     margin-top: 110px;
     text-align: center;
   }  
- #mb video{
-	 width: 100%;}
+  #mb video{
+    width: 100%;
+  }
 
   /* box */
   #box{

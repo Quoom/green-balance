@@ -198,7 +198,8 @@ transition:all 0.5s;
     /* padding-bottom을 주니까 넘쳤음~ */
    }  
    .zero{
-    padding-top: 200px;
+    margin-top: 200px;
+    /* 패딩으로 넣을경우, 위로 이미지 스케일이 넘쳐버린다!!! 주의!! */
    }
    /* 배너에 호버 효과 넣기 */
    #event ul li:hover img{

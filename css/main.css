@@ -409,9 +409,24 @@ transition:all 0.5s;
   .icon a img{
     transition: all 0.5s;
   }
+  .icon a:hover h4{
+    color: #486d2e;
+    transform: translateY(-10px);
+  }
+  .icon a h4{
+    transition: all 0.5s;
+  }
+  .icon a:hover p{
+    color: #486d2e;
+    transform: translateY(-10px);
+  }
+  .icon a p{
+    transition: all 0.5s;
+  }
+
 
   /* main_slogan */
-  #main_slogan{
+  /* #main_slogan{
     background-image: url(../images/main_slogan.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -419,6 +434,36 @@ transition:all 0.5s;
     width: 100%;
     margin-top: 100px;
     margin-bottom: 200px;
+  } */
+  #main_slogan{
+    background:url(../images/main_slogan_stached.jpg) no-repeat center center fixed;
+    height:451px;
+    color:#fff;
+    margin-top: 135px;
+    margin-bottom: 150px;
+    /* text-align: center; 글자 위치를 가운데로~*/
+  }
+  .story{
+    margin: auto;
+    width: 1700px;
+  }
+  .story h1{
+    font-family: 'Oswald', sans-serif;
+    font-size:90px;
+    letter-spacing: 3px;
+    line-height:50px;
+    padding-top:97px;
+    padding-bottom: 65px;
+    font-weight: 400;
+  }
+  .story p{
+    letter-spacing: 3px;
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 46px;
+  }
+  .story span{
+    font-weight: 700;
   }
 
   /* event, sns이벤트 배너 */
@@ -559,6 +604,32 @@ transition:all 0.5s;
   .restaurant{
     transition: all 0.6s;
   }
+    .restaurant span{position:absolute;
+      top:50%;
+      left:0;
+      transform:translateY(-50%);
+      display:none;
+      width:100%;
+      font-size:30px;
+      color:#fff;
+      font-weight:bold;
+      text-align:center;}
+    .restaurant::before, .restaurant::after{
+      content:' ';
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:95%;
+      height:95%;
+      transform:translate(-50%,-50%);
+      transition:all 0.8s;}
+    .restaurant::before{border-top:3px solid #fff;border-bottom:3px solid #fff;
+    width:0;}
+    .restaurant::after{border-left:3px solid #fff;border-right:3px solid #fff;
+    height:0;}
+   
+    .restaurant:hover::before{width:95%;}
+    .restaurant:hover::after{height:95%;}
   #store .title{
     text-align: center;
   }
@@ -659,11 +730,15 @@ transition:all 0.5s;
   position: relative;
   padding-bottom: 30px;
 }
+#footer video{
+  opacity: 100%;
+}
 .logo li{
   float: left;
   color: #ccc;
   padding-top: 50px;
   padding-right: 30px;
+   line-height: 30px;
 }
 .footer_icon li{
   float: left;
